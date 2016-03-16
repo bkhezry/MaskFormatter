@@ -49,7 +49,7 @@ Then you can use it like this:
 ```java
 public MainActivity extends Activity {
 
-     private static final IBAN_MASK = „AA 99 9999 AAAA wwww wwww wwww”;
+     private static final IBAN_MASK = "AA 99 9999 AAAA wwww wwww wwww";
 
      @Override
      public void onCreate(Bundle savedInstanceState) {
