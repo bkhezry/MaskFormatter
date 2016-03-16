@@ -3,6 +3,8 @@ MaskFormatter adds mask functionality to your EditText. It will prevent user fro
 
 ![MaskFormatter](https://raw.githubusercontent.com/AzimoLabs/MaskFormatter/master/art/screenshot.png)
 
+![Animated](https://raw.githubusercontent.com/AzimoLabs/MaskFormatter/master/art/animated.gif)
+
 Mask should be built from characters listed below (java regex associated to character given after colon):
 
 ```
