@@ -1,7 +1,7 @@
 # MaskFormatter
 MaskFormatter adds mask functionality to your EditText. It will prevent user from inserting not allowed signs, and format input as well.
 
-![MaskFormatter](https://raw.githubusercontent.com/AzimoLabs/MaskFormatter/master/screenshot.png)
+![MaskFormatter](https://raw.githubusercontent.com/AzimoLabs/MaskFormatter/master/art/screenshot.png)
 
 Mask should be built from characters listed below (java regex associated to character given after colon):
 
