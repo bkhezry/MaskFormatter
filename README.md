@@ -37,11 +37,16 @@ Mask should be built from characters listed below (java regex associated to char
 
 # Usage
 
-Please copy and paste three files from formatter folder - `MaskFormatter.java`, `CharTransforms.java` and `InvalidTextException.java`.
+Please copy and paste three files from [maskformatter/](https://github.com/AzimoLabs/MaskFormatter/tree/master/maskformatter/src/main/java/com/azimolabs/maskformatter) directory:
+
+- `MaskFormatter.java`
+- `CharTransforms.java` 
+- `InvalidTextException.java`
+
 
 Then you can use it like this:
 
-```
+```java
 public MainActivity extends Activity {
 
      private static final IBAN_MASK = „AA 99 9999 AAAA wwww wwww wwww”;
@@ -57,7 +62,7 @@ public MainActivity extends Activity {
      }
 
 }
-```
+```java
 
 # License
 
