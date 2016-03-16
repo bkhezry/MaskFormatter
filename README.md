@@ -64,6 +64,16 @@ public MainActivity extends Activity {
 }
 ```
 
+And make sure that you disabled suggestions from used EditText:
+
+```xml
+<EditText
+    android:id="@+id/etIban"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="text|textNoSuggestions" />
+```
+
 # License
 
 ```
