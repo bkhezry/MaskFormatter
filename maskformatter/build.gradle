@@ -41,3 +41,5 @@ dependencies {
         exclude module: 'wagon-provider-api'
     }
 }
+
+apply from: rootProject.file('gradle/gradle-bintray-push.gradle')
