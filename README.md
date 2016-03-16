@@ -62,7 +62,7 @@ public MainActivity extends Activity {
      }
 
 }
-```java
+```
 
 # License
 
