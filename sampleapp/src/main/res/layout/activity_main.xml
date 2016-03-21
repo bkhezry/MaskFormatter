@@ -1,59 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="@dimen/margin_big"
-    tools:context="com.azimolabs.maskformatter.sampleapp.MainActivity">
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="@dimen/margin_big"
+              tools:context="com.azimolabs.maskformatter.sampleapp.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="@dimen/margin_small"
-        android:text="@string/iban_mask_hint" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text|textNoSuggestions" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/margin_small"
-        android:paddingTop="@dimen/margin_small"
-        android:text="@string/numbers_mask_hint" />
-
-    <EditText
-        android:id="@+id/etNumbers"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text|textNoSuggestions" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/margin_small"
-        android:paddingTop="@dimen/margin_small"
-        android:text="@string/chars_mask_hint" />
-
-    <EditText
-        android:id="@+id/etChars"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text|textNoSuggestions" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/margin_small"
-        android:text="@string/iban_mask_hint" />
+        android:text="@string/iban_mask_hint"/>
 
     <EditText
         android:id="@+id/etIban"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text|textNoSuggestions" />
+        android:inputType="text|textNoSuggestions"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin_small"
+        android:paddingTop="@dimen/margin_small"
+        android:text="@string/numbers_mask_hint"/>
+
+    <EditText
+        android:id="@+id/etNumbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text|textNoSuggestions"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin_small"
+        android:paddingTop="@dimen/margin_small"
+        android:text="@string/chars_mask_hint"/>
+
+    <EditText
+        android:id="@+id/etChars"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text|textNoSuggestions"/>
 
 </LinearLayout>
