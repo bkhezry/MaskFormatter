@@ -101,6 +101,7 @@ public class MaskFormatter implements TextWatcher {
         if (editTextChange) {
             maskedField.setSelection(newIndex);
         }
+        setInputTypeBasedOnMask();
     }
 
     private String applyMask(String newValue) throws InvalidTextException {
@@ -124,6 +125,32 @@ public class MaskFormatter implements TextWatcher {
 
     private char applyMaskToChar(char c, int maskIndex) throws InvalidTextException {
         return CharTransforms.transformChar(c, mask.charAt(maskIndex));
+    }
+
+    private void setInputTypeBasedOnMask() {
+        int selection = maskedField.getSelectionEnd();
+        if (selection >= mask.length()) {
+            return;
+        }
+
+        char maskChar = getFirstNotWhiteCharFromMask();
+        if (maskChar == SPACE) {
+            return;
+        }
+
+        maskedField.setInputType(CharInputType.getKeyboardTypeForNextChar(maskChar));
+    }
+
+    private char getFirstNotWhiteCharFromMask() {
+        int maskIndex = maskedField.getSelectionEnd();
+        while (maskIndex < mask.length() && mask.charAt(maskIndex) == SPACE) {
+            maskIndex++;
+        }
+        return mask.charAt(maskIndex);
+    }
+
+    public String getRawTextValue() {
+        return maskedField.getText().toString().replaceAll("\\s", "");
     }
 
 }

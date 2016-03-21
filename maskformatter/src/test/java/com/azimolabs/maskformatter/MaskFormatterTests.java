@@ -1,5 +1,7 @@
 package com.azimolabs.maskformatter;
 
+import android.text.Editable;
+import android.text.InputType;
 import android.widget.EditText;
 
 import org.junit.Before;
@@ -7,6 +9,9 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Matchers.anyInt;
+import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.reset;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -164,4 +169,46 @@ public class MaskFormatterTests {
 
         verify(mockEditText).setText("34 SREF ar");
     }
+
+    @Test
+    public void testShouldSetProperInputTypeToTextWithIBANMask() {
+        reset(mockEditText);
+        String fieldCurrentValue = "1";
+        when(mockEditText.getSelectionEnd()).thenReturn(fieldCurrentValue.length());
+
+        filter.afterTextChanged(null);
+
+        verify(mockEditText).setInputType(InputType.TYPE_CLASS_NUMBER);
+
+        // ---
+
+        reset(mockEditText);
+        fieldCurrentValue = "11";
+        when(mockEditText.getSelectionEnd()).thenReturn(fieldCurrentValue.length());
+
+        filter.afterTextChanged(null);
+
+        verify(mockEditText).setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_CAP_CHARACTERS);
+
+        // ---
+
+        reset(mockEditText);
+        fieldCurrentValue = "11 ABCD cd";
+        when(mockEditText.getSelectionEnd()).thenReturn(fieldCurrentValue.length());
+
+        filter.afterTextChanged(null);
+
+        verify(mockEditText).setInputType(InputType.TYPE_CLASS_TEXT);
+
+        // ---
+
+        fieldCurrentValue = "99 ABCD acbd 1234 efgh ijkl";
+        reset(mockEditText);
+        when(mockEditText.getSelectionEnd()).thenReturn(fieldCurrentValue.length());
+
+        filter.afterTextChanged(null);
+
+        verify(mockEditText, never()).setInputType(anyInt());
+    }
+
 }
