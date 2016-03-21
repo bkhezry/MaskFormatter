@@ -22,5 +22,8 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
-    compile project(path: ':maskformatter')
+    //Uncomment to use local version of library
+//    compile project(path: ':maskformatter')
+
+    compile 'com.azimolabs.maskformatter:maskformatter:0.1'
 }
