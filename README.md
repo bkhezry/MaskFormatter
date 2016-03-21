@@ -38,13 +38,25 @@ Mask should be built from characters listed below (java regex associated to char
 ```
 
 # Usage
+In your `build.gradle`:
 
-Please copy and paste three files from [maskformatter/](https://github.com/AzimoLabs/MaskFormatter/tree/master/maskformatter/src/main/java/com/azimolabs/maskformatter) directory:
+```gradle
 
-- `MaskFormatter.java`
-- `CharTransforms.java` 
-- `InvalidTextException.java`
+dependencies {
+    compile 'com.azimolabs.maskformatter:maskformatter:0.1'
+}
 
+```
+
+Library is distributed via jCenter Maven repository. Make sure that you have it in your root gradle config:
+
+```gradle
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+```
 
 Then you can use it like this:
 
