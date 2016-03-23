@@ -43,7 +43,7 @@ In your `build.gradle`:
 ```gradle
 
 dependencies {
-    compile 'com.azimolabs.maskformatter:maskformatter:0.1'
+    compile 'com.azimolabs.maskformatter:maskformatter:0.2'
 }
 
 ```
