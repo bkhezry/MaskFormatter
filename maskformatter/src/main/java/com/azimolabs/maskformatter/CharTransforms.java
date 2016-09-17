@@ -44,12 +44,12 @@ public class CharTransforms {
     static {
         transformMap.put('9', new TransformPattern("[0-9]", false, false));
         transformMap.put('8', new TransformPattern("[0-8]", false, false));
-        transformMap.put('7', new TransformPattern("[0-7]", false, false));
-        transformMap.put('6', new TransformPattern("[0-6]", false, false));
+        transformMap.put('7', new TransformPattern("[1-7]", false, false));
+        transformMap.put('6', new TransformPattern("[6]", false, false));
         transformMap.put('5', new TransformPattern("[0-5]", false, false));
         transformMap.put('4', new TransformPattern("[0-4]", false, false));
-        transformMap.put('3', new TransformPattern("[0-3]", false, false));
-        transformMap.put('2', new TransformPattern("[0-2]", false, false));
+        transformMap.put('3', new TransformPattern("[3]", false, false));
+        transformMap.put('2', new TransformPattern("[1-2]", false, false));
         transformMap.put('1', new TransformPattern("[0-1]", false, false));
         transformMap.put('0', new TransformPattern("[0]", false, false));
 
