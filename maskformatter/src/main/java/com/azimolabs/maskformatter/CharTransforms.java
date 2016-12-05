@@ -64,6 +64,8 @@ public class CharTransforms {
         transformMap.put('!', new TransformPattern("[1]", false, false));
         transformMap.put(')', new TransformPattern("[0]", false, false));
 
+        transformMap.put(':', new TransformPattern("[1-2]", false, false));
+
 
     }
 
