@@ -1,7 +1,4 @@
 <resources>
     <string name="app_name">sampleapp</string>
-
-    <string name="iban_mask_hint">Field with mask: AA 9999 AAAA wwww wwww wwww</string>
-    <string name="numbers_mask_hint">Field with mask: dd DD 1234 5678 90</string>
-    <string name="chars_mask_hint">Field with mask: AAZZ aazz @@ww ##%%</string>
+    <string name="iban_mask_hint">Field with mask: 2 3 06 07 99 99 9999</string>
 </resources>

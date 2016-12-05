@@ -23,7 +23,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     //Uncomment to use local version of library
-//    compile project(path: ':maskformatter')
+    compile project(path: ':maskformatter')
 
-    compile 'com.azimolabs.maskformatter:maskformatter:0.1'
+    //compile 'com.azimolabs.maskformatter:maskformatter:0.1'
 }

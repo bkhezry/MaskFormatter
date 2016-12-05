@@ -8,11 +8,8 @@ import com.azimolabs.maskformatter.MaskFormatter;
 
 public class MainActivity extends Activity {
 
-    private static final String IBAN_MASK = "AA 9999 AAAA wwww wwww wwww";
+    private static final String IBAN_MASK = "2 3 06 07 99 99 9999";
 
-    private static final String NUMBERS_MASK = "dd DD 1234 5678 90";
-
-    private static final String CHARS_MASK = "AAZZ aazz @@ww ##%%";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,13 +20,6 @@ public class MainActivity extends Activity {
         MaskFormatter ibanFormatter = new MaskFormatter(IBAN_MASK, ibanField);
         ibanField.addTextChangedListener(ibanFormatter);
 
-        EditText numbersField = (EditText) findViewById(R.id.etNumbers);
-        MaskFormatter numbersFormatter = new MaskFormatter(NUMBERS_MASK, numbersField);
-        numbersField.addTextChangedListener(numbersFormatter);
-
-        EditText charsField = (EditText) findViewById(R.id.etChars);
-        MaskFormatter charsFormatter = new MaskFormatter(CHARS_MASK, charsField);
-        charsField.addTextChangedListener(charsFormatter);
     }
 
 }
